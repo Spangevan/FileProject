@@ -8,9 +8,10 @@ public class App {
 		
 		CreateAndWriteFile program = new CreateAndWriteFile();
 		
+		
 		program.createFile();
 		
-		program.writeToFile();
+		program.writeAndAppendFile();
 		
 		
 		

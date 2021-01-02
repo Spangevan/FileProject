@@ -1,6 +1,7 @@
 package fileprogram;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -9,7 +10,7 @@ import java.io.InputStreamReader;
 public class CreateAndWriteFile {
 
 	BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-
+	
 	public void createFile() {
 
 		File textFile = new File("/Users/evanspangenberg/FileProject/potatolog.txt");
@@ -32,13 +33,14 @@ public class CreateAndWriteFile {
 
 	}
 
-	public void writeToFile() throws IOException {
+	public void writeAndAppendFile() throws IOException {
 
-		FileWriter fileWriter = new FileWriter("/Users/evanspangenberg/FileProject/potatolog.txt");
+		BufferedWriter fileWriter = new BufferedWriter(new FileWriter("/Users/evanspangenberg/FileProject/potatolog.txt", true));
+
 
 		System.out.println("please input text you would like to add to the file");
 
-		fileWriter.write(bufferedReader.readLine());
+		fileWriter.write(" " + bufferedReader.readLine());
 		fileWriter.close();
 
 		System.out.println("Successfully wrote to the file!");
