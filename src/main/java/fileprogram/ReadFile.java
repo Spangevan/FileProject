@@ -4,7 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-public class FileReader {
+public class ReadFile {
 	
 	public static void readFile() throws IOException {
 		File potatoLog = new File("/Users/evanspangenberg/FileProject/potatolog.txt");
