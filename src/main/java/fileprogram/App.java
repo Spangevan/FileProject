@@ -1,20 +1,25 @@
 package fileprogram;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class App {
-	
-	public static void main (String [] args) throws IOException {
+
+	public static void main(String[] args) throws IOException {
+
+		CreateAndWriteFile newFile = new CreateAndWriteFile();
+		ReadFile createdFile = new ReadFile();
+
+		newFile.createFile();
+
+		newFile.writeAndAppendFile();
 		
-		CreateAndWriteFile program = new CreateAndWriteFile();
+		System.out.println("Below are the contents of the file!");
 		
-		
-		program.createFile();
-		
-		program.writeAndAppendFile();
-		
-		
-		
+		createdFile.readFile();
+
+
 	}
 
 }
